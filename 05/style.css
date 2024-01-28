@@ -92,19 +92,18 @@ p{
     font-weight: 600;
     font-size: 15px;
 }
-.right{
-    display: block;
-}
+
 .top{
     display: none;
 }
 .illustration-mobile{
     width: 100%;
+    overflow: hidden;
 }
 
 @media (max-width:768px) {
     .container{
-        height: 100dvh;
+        height: 100vh;
         width: 100%;
         border-radius: 0;
         flex-direction: column-reverse;
