@@ -25,11 +25,11 @@
                         <p>And much more!</p>
                     </li>
                 </ul>
-                <div class="form-box">
+                <form class="form-box">
                     <label for="mail-input" class="mail-label">Email adress</label>
                     <input type="email" id="mail-input" placeholder="email@company.com" />
-                    <input type="button" id="mail-submit" value="Subscribe to monthly newsletter" />
-                </div>
+                    <input type="submit" id="mail-submit" value="Subscribe to monthly newsletter" onclick="handleSubmit()" />
+                </form>
             </div>
             <div class="right">
                 <img
@@ -46,5 +46,14 @@
                 />
             </div>
         </div>
+        <div class="success-container">
+            <div class="success-informations">
+                <img src="./assets/images/icon-success.svg" alt="icon-success" height="45">
+            <h1>Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <span class="mail-provided"></span>.Please open it and click the button inside to confirm your subscription.</p>
+            </div>
+            <input type="submit" id="dismiss-message" value="Dismiss message" />
+        </div>
     </body>
+    <script src="app.js"></script>
 </html>

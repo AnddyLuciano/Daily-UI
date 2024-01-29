@@ -18,6 +18,7 @@ body{
 }
 h1{
     color: hsl(234, 29%, 20%);
+    font-size: 40px;
     font-weight: 700;
 }
 li{
@@ -47,7 +48,6 @@ p{
     flex-direction: column;
     padding: 0 60px 0 35px;
     gap: 20px;
-    max-width: min-content;
 }
 .list-box{
     display: flex;
@@ -69,7 +69,7 @@ p{
     outline: none;
     border:1px solid hsl(234, 29%, 20%)
 }
-#mail-submit{
+#mail-submit,#dismiss-message{
     color: white;
     background-color: hsl(234, 29%, 20%);
     border: none;
@@ -78,7 +78,10 @@ p{
     font-weight: 700;
     margin: 7px 0;
 }
-#mail-submit:hover{
+#dismiss-message{
+    min-width: 300px;
+}
+#mail-submit:hover,#dismiss-message:hover{
     background: rgb(255,83,120);
     background: linear-gradient(90deg, hsl(347, 100%, 66%) 0%, hsl(15, 98%, 61%) 100%);
     -webkit-box-shadow: 0px 15px 38px -10px rgb(253, 106, 57);
@@ -101,6 +104,21 @@ p{
     overflow: hidden;
 }
 
+.success-container{
+    background-color: white;
+    display: none;
+    align-items: start;
+    flex-direction: column;
+    max-width: min-content;
+    padding: 40px 40px;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.mail-provided{
+    font-weight: 700;
+}
+
 @media (max-width:768px) {
     .container{
         height: 100vh;
@@ -110,6 +128,20 @@ p{
         justify-content: start;
         gap: 20px;
         padding: 0;
+    }
+    .success-container{
+        height: 100vh;
+        justify-content: space-between;
+        border-radius: 0;
+
+    }
+    .success-informations{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 30px;
+        height: 350px;
     }
     .right{
         display: none;
